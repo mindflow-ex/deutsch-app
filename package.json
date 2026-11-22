@@ -1,0 +1,31 @@
+{
+  "name": "deutsch-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindflow-ex/deutsch-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindflow-ex/deutsch-app/issues"
+  },
+  "homepage": "https://github.com/mindflow-ex/deutsch-app#readme",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
+    "ajv": "^8.20.0",
+    "svelte": "^5.59.1",
+    "vite": "^6.4.6",
+    "vite-plugin-pwa": "^2.0.0"
+  },
+  "dependencies": {
+    "idb": "^8.0.4",
+    "vosk-browser": "^0.0.8"
+  }
+}
