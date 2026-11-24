@@ -1,8 +1,8 @@
 <script>
   import { say } from '../lib/audio.js';
-  let { text, slow = true, big = false, label = '' } = $props();
+  let { text, slow = true, big = false, label = '', voice } = $props();
   let playing = $state(false);
-  async function play(s) { playing = true; await say(text, { slow: s }); playing = false; }
+  async function play(s) { playing = true; await say(text, { slow: s, voice }); playing = false; }
 </script>
 <span class="listen">
   <button class="icon {big ? 'big' : ''}" class:on={playing} onclick={() => play(false)} aria-label="Слушать">🔊{label ? ' ' + label : ''}</button>

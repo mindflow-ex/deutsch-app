@@ -1,4 +1,4 @@
-// Озвучка: заранее сгенерированные Piper MP3 (public/audio), иначе голос телефона.
+// Озвучка: заранее сгенерированные MP3 (public/audio: Катя, мужские реплики — Киллиан), иначе голос телефона.
 import { settings } from './state.svelte.js';
 
 let manifest = null;
@@ -8,11 +8,11 @@ const ready = fetch('./audio/manifest.json')
   .catch(() => (manifest = {}));
 
 let current = null;
-export async function say(text, { slow = false } = {}) {
+export async function say(text, { slow = false, voice } = {}) {
   await ready;
   stop();
   const rate = slow ? 0.7 : settings.rate || 1;
-  const file = manifest[text.trim()];
+  const file = (voice === 'm' && manifest['m:' + text.trim()]) || manifest[text.trim()];
   if (file) {
     const a = new Audio('./audio/' + file);
     a.playbackRate = rate;

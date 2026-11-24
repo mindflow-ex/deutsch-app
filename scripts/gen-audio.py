@@ -1,64 +1,59 @@
 #!/usr/bin/env python3
-"""Озвучка всех фраз через Piper (бесплатный офлайн-синтезатор).
+"""Озвучка всех фраз нейроголосами Microsoft Edge (бесплатно, через edge-tts).
+
+Катя (de-DE-KatjaNeural) читает весь курс, Киллиан (de-DE-KillianNeural, чуть медленнее)
+читает реплики собеседника в диалогах с "voice": "m". Голоса выбраны на слух.
+Медленный режим 🐢 делает приложение (playbackRate), отдельные записи не нужны.
 
 Запуск: node scripts/collect-texts.mjs && python3 scripts/gen-audio.py
-Нужно: pip install piper-tts, ffmpeg. Голос скачивается с Hugging Face (rhasspy/piper-voices).
-Готовые MP3 не пересоздаются, поэтому повторный запуск быстрый.
+Нужно: pip install edge-tts. Готовые MP3 не пересоздаются, лишние удаляются.
 """
-import json, os, subprocess, sys, tempfile, urllib.request, wave
+import asyncio, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VOICE = os.environ.get("PIPER_VOICE", "de_DE-thorsten-high")
-VOICE_DIR = os.path.join(ROOT, ".cache", "piper")
 OUT = os.path.join(ROOT, "public", "audio")
-BASE = "https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/{spk}/{q}/{name}"
+VOICES = {
+    "f": ("de-DE-KatjaNeural", "+0%"),
+    "m": ("de-DE-KillianNeural", "-5%"),
+}
+PARALLEL = 4
+TRIES = 5
 
 
-def ensure_voice():
-    os.makedirs(VOICE_DIR, exist_ok=True)
-    _, spk, q = VOICE.split("-")
-    for ext in (".onnx", ".onnx.json"):
-        path = os.path.join(VOICE_DIR, VOICE + ext)
-        if not os.path.exists(path):
-            url = BASE.format(spk=spk, q=q, name=VOICE + ext)
-            print("скачиваю", url)
-            urllib.request.urlretrieve(url, path)
-    return os.path.join(VOICE_DIR, VOICE + ".onnx")
+async def make(item, sem):
+    import edge_tts
+    path = os.path.join(OUT, item["file"])
+    voice, rate = VOICES[item["voice"]]
+    async with sem:
+        for attempt in range(1, TRIES + 1):
+            try:
+                tmp = path + ".part"
+                await edge_tts.Communicate(item["text"], voice, rate=rate).save(tmp)
+                if os.path.getsize(tmp) < 1000:
+                    raise RuntimeError("пустой файл")
+                os.replace(tmp, path)
+                return
+            except Exception as e:  # сеть Edge иногда отваливается
+                print(f"повтор {attempt}/{TRIES}: {item['text']!r}: {e}", file=sys.stderr)
+                await asyncio.sleep(2 * attempt)
+    raise RuntimeError(f"не удалось озвучить {item['text']!r}")
 
 
-def main():
-    from piper import PiperVoice  # piper-tts
-
+async def main():
     texts = json.load(open(os.path.join(ROOT, ".cache", "texts.json"), encoding="utf-8"))
     os.makedirs(OUT, exist_ok=True)
-    voice = PiperVoice.load(ensure_voice())
-    syn_cfg = None
-    try:
-        from piper import SynthesisConfig
-        syn_cfg = SynthesisConfig(length_scale=1.08, noise_scale=0.55, noise_w_scale=0.7)
-    except Exception:
-        pass
-    made = 0
-    manifest = {}
-    for item in texts:
-        mp3 = os.path.join(OUT, item["file"])
-        if not os.path.exists(mp3):
-            with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
-                wav_path = tmp.name
-            with wave.open(wav_path, "wb") as wf:
-                if hasattr(voice, "synthesize_wav"):
-                    voice.synthesize_wav(item["text"], wf, syn_config=syn_cfg) if syn_cfg else voice.synthesize_wav(item["text"], wf)
-                else:  # piper-tts < 1.3
-                    voice.synthesize(item["text"], wf, length_scale=1.08)
-            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", wav_path, "-af",
-                            "silenceremove=start_periods=1:start_threshold=-50dB,apad=pad_dur=0.15",
-                            "-ac", "1", "-ar", "22050", "-b:a", "48k", mp3], check=True)
-            os.unlink(wav_path)
-            made += 1
-        manifest[item["text"]] = item["file"]
+    todo = [t for t in texts if not os.path.exists(os.path.join(OUT, t["file"]))]
+    sem = asyncio.Semaphore(PARALLEL)
+    await asyncio.gather(*(make(t, sem) for t in todo))
+    keep = {t["file"] for t in texts}
+    removed = 0
+    for f in os.listdir(OUT):
+        if f.endswith(".mp3") and f not in keep:
+            os.remove(os.path.join(OUT, f)); removed += 1
+    manifest = {t["key"]: t["file"] for t in texts}
     json.dump(manifest, open(os.path.join(OUT, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False)
-    print(f"Готово: всего {len(manifest)}, новых {made}")
+    print(f"Готово: всего {len(manifest)}, новых {len(todo)}, удалено старых {removed}")
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    asyncio.run(main())
