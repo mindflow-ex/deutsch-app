@@ -39,8 +39,15 @@ export function lev(a, b) {
 // Сравнение распознанной речи с образцом: какие слова совпали.
 export function compareSpeech(target, heard) {
   const words = norm(target).split(' ');
-  const got = new Set(translit(norm(heard)).split(' '));
-  const marks = words.map((w) => ({ w, ok: got.has(translit(w)) }));
+  const got = norm(heard).split(' ').filter(Boolean);
+  // Одна неточность в длинном слове прощается, но не путаница o/ö, u/ü, a/ä — её и тренируем.
+  const strip = (x) => x.replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u');
+  const near = (a, b) => {
+    if (a === b || translit(a) === translit(b)) return true;
+    if (strip(a) === strip(b)) return false;
+    return a.length >= 6 && lev(a, b) <= 1;
+  };
+  const marks = words.map((w) => ({ w, ok: got.some((g) => near(w, g)) }));
   const score = marks.filter((m) => m.ok).length / Math.max(words.length, 1);
   return { marks, score };
 }

@@ -1,7 +1,7 @@
 <script>
   // Кнопка записи с распознаванием речи. onresult(text) вызывается после остановки.
   import { listen, loadVosk, voskState, engine } from '../lib/speech.svelte.js';
-  let { onresult, label = 'Нажми и говори' } = $props();
+  let { onresult, label = 'Нажми и говори', target = '' } = $props();
   let session = $state(null);
   let partial = $state('');
   let error = $state('');
@@ -20,7 +20,7 @@
     try {
       busy = true;
       partial = '';
-      session = await listen((p) => (partial = p));
+      session = await listen((p) => (partial = p), { target, onAuto: () => session && toggle() });
     } catch (e) {
       error = e?.name === 'NotAllowedError' ? 'Нет доступа к микрофону. Разрешите его в настройках браузера.' :
         'Распознавание пока недоступно: ' + (e?.message || e);

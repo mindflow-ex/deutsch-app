@@ -5,6 +5,8 @@ export const settings = $state({
   rate: 1,
   sfx: true,
   asr: 'vosk', // 'vosk' | 'browser'
+  asrVocab: true, // искать только слова курса
+  micRaw: false, // выключить шумодав и эхоподавление
   remindTime: '19:30'
 });
 export const profile = $state({ name: '', mascot: '', partner: '', ready: false, loaded: false });
