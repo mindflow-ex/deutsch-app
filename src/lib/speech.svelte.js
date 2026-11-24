@@ -1,6 +1,8 @@
 // Распознавание речи на телефоне.
 // vosk — офлайн-модель (работает на Huawei без Google), browser — Web Speech API (Samsung/Chrome).
 import { settings } from './state.svelte.js';
+import { asrVocab } from './content.js';
+import { norm, compareSpeech } from './text.js';
 
 const MODEL_URL = new URL('./models/vosk-model-small-de.tar.gz', location.href).href;
 let modelPromise = null;
@@ -25,28 +27,47 @@ export function loadVosk() {
 }
 
 // Начинает запись. Возвращает объект с stop(): Promise<string>.
-export async function listen(onPartial = () => {}) {
-  if (engine() === 'browser') return listenBrowser(onPartial);
+// Начинает запись. Возвращает объект с stop(): Promise<string>.
+// onAuto() вызывается, когда пора остановиться самим: тишина после речи или целевая фраза узнана.
+export async function listen(onPartial = () => {}, { target = '', onAuto = () => {} } = {}) {
+  const watcher = autoStop(target, onAuto);
+  const partial = (t) => { const c = clean(t); onPartial(c); watcher(c); };
+  if (engine() === 'browser') return listenBrowser(partial);
   const model = await loadVosk();
+  // Обработку звука браузера можно выключить: на некоторых телефонах шумодав портит речь.
+  const raw = settings.micRaw;
   const stream = await navigator.mediaDevices.getUserMedia({
-    audio: { echoCancellation: true, noiseSuppression: true, channelCount: 1 }
+    audio: { echoCancellation: !raw, noiseSuppression: !raw, autoGainControl: true, channelCount: 1 }
   });
-  const ctx = new AudioContext();
-  const rec = new model.KaldiRecognizer(ctx.sampleRate);
-  let text = [];
+  let ctx;
+  try { ctx = new AudioContext({ sampleRate: 16000 }); } catch { ctx = new AudioContext(); }
+  let src;
+  try { src = ctx.createMediaStreamSource(stream); }
+  catch { // Firefox не умеет соединять микрофон с контекстом другой частоты
+    await ctx.close(); ctx = new AudioContext(); src = ctx.createMediaStreamSource(stream);
+  }
+  if (ctx.state === 'suspended') await ctx.resume();
+  // Грамматика: только слова курса + [unk]. Выключается в настройках для сравнения.
+  const grammar = settings.asrVocab !== false ? JSON.stringify([asrVocab.join(' '), '[unk]']) : undefined;
+  const rec = grammar ? new model.KaldiRecognizer(ctx.sampleRate, grammar) : new model.KaldiRecognizer(ctx.sampleRate);
+  const text = [];
   let finalResolve;
   rec.on('result', (m) => {
     if (m.result.text) text.push(m.result.text);
+    partial(text.join(' '));
     if (finalResolve) finalResolve();
   });
-  rec.on('partialresult', (m) => onPartial([...text, m.result.partial].join(' ').trim()));
-  const src = ctx.createMediaStreamSource(stream);
+  rec.on('partialresult', (m) => partial([...text, m.result.partial].join(' ')));
   const proc = ctx.createScriptProcessor(4096, 1, 1);
   proc.onaudioprocess = (e) => { try { rec.acceptWaveform(e.inputBuffer); } catch {} };
   src.connect(proc);
   proc.connect(ctx.destination);
+  let stopped = false;
   return {
     async stop() {
+      if (stopped) return clean(text.join(' '));
+      stopped = true;
+      watcher.cancel();
       const done = new Promise((r) => (finalResolve = r));
       proc.disconnect(); src.disconnect();
       stream.getTracks().forEach((t) => t.stop());
@@ -54,9 +75,28 @@ export async function listen(onPartial = () => {}) {
       await Promise.race([done, new Promise((r) => setTimeout(r, 1500))]);
       ctx.close();
       try { rec.remove(); } catch {}
-      return text.join(' ').trim();
+      return clean(text.join(' '));
     }
   };
+}
+
+// Убираем служебное [unk] и случайные грубые слова, которые распознаватель иногда «слышит» в шуме.
+const BAD = /\b(scheiße|scheisse|scheiß|arsch|fick\w*|hure|mist)\b/gi;
+function clean(t) { return (t || '').replace(/\[unk\]/g, ' ').replace(BAD, ' ').replace(/\s+/g, ' ').trim(); }
+
+// Автостоп: 1,6 с тишины после начала речи, или сразу после того, как узнаны все слова цели.
+function autoStop(target, onAuto) {
+  let timer = null, last = '', fired = false;
+  const goal = target ? norm(target).split(' ') : [];
+  const fire = () => { if (!fired) { fired = true; onAuto(); } };
+  const w = (t) => {
+    if (fired || !t) return;
+    if (goal.length && compareSpeech(target, t).score === 1) { clearTimeout(timer); timer = setTimeout(fire, 500); return; }
+    if (t !== last) { last = t; clearTimeout(timer); timer = setTimeout(fire, 1600); }
+  };
+  const cap = setTimeout(fire, 12000); // в шуме (музыка) тишины может не быть
+  w.cancel = () => { fired = true; clearTimeout(timer); clearTimeout(cap); };
+  return w;
 }
 
 function listenBrowser(onPartial) {
@@ -81,7 +121,7 @@ function listenBrowser(onPartial) {
     async stop() {
       r.stop();
       await Promise.race([endP, new Promise((res) => setTimeout(res, 2000))]);
-      return finalText.trim();
+      return clean(finalText);
     }
   });
 }

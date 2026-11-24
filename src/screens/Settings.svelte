@@ -31,7 +31,7 @@
     try {
       asrResult = null; asrText = '';
       const t = Date.now();
-      asrSession = await listen((p) => (asrText = p));
+      asrSession = await listen((p) => (asrText = p), { target: TEST, onAuto: () => asrSession && asrToggle() });
       t0 = Date.now();
       if (settings.asr === 'vosk') asrMsg = `Модель готова за ${((t0 - t) / 1000).toFixed(1)} с`;
     } catch (e) { asrMsg = 'Ошибка: ' + (e?.message || e); }
@@ -79,6 +79,10 @@
       {#if voskState.status === 'idle' || voskState.status === 'error'}<button class="secondary" onclick={() => loadVosk().catch(() => {})}>Скачать модель сейчас</button>{/if}
       {#if voskState.error}<p class="small" style="color:var(--bad)">{voskState.error}</p>{/if}
     {/if}
+    {#if settings.asr === 'vosk'}
+      <label class="check"><input type="checkbox" bind:checked={settings.asrVocab} onchange={persist} /> Искать только слова курса (точнее, рекомендуем)</label>
+      <label class="check"><input type="checkbox" bind:checked={settings.micRaw} onchange={persist} /> Выключить шумодав микрофона (попробуйте, если распознаёт плохо)</label>
+    {/if}
     <h3>Проверка качества</h3>
     <p>Нажмите «Начать» и прочитайте вслух:</p>
     <p><b>{TEST}</b></p>
@@ -88,7 +92,7 @@
     {#if asrResult}
       <p>Услышано: «{asrResult.text}»</p>
       <p>Узнано слов: <b>{Math.round(asrResult.score * 100)}%</b>. {asrResult.score >= 0.8 ? 'Отлично, распознавание подходит для занятий.' : asrResult.score >= 0.5 ? 'Терпимо. Говорите чуть медленнее и ближе к микрофону.' : 'Плохо. Попробуйте в тишине или другой движок.'}</p>
-      <p class="small soft">Пришлите этот результат Claude, чтобы зафиксировать качество на вашем телефоне.</p>
+      <p class="small soft">Режим: {settings.asr === 'vosk' ? `Vosk, ${settings.asrVocab !== false ? 'слова курса' : 'свободно'}, шумодав ${settings.micRaw ? 'выкл' : 'вкл'}` : 'браузер'} · {(asrResult.ms / 1000).toFixed(1)} с. Пришлите процент и режим Claude.</p>
     {/if}
   </div>
 

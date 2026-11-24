@@ -26,7 +26,7 @@
 <p class="q">Послушайте и повторите вслух</p>
 <p class="de">{ex.text} <Listen text={ex.text} /></p>
 <p class="soft">{ex.ru}</p>
-<Mic {onresult} />
+<Mic {onresult} target={ex.text} />
 {#if result}
   <div class="card-soft">
     <p class="soft">Телефон услышал: «{result.text || '…тишина…'}»</p>

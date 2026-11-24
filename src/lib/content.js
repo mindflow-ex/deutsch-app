@@ -17,3 +17,18 @@ export const allLessons = chapters.flatMap((c) => c.lessons);
 
 export const wordLabel = (w) => (w.article ? `${w.article} ${w.de}` : w.de);
 export const articleColor = { der: 'var(--der)', das: 'var(--das)', die: 'var(--die)' };
+
+// Словарь курса для распознавания: Vosk ищет только эти слова, это сильно повышает точность.
+const tok = (s) => (s || '').toLowerCase().match(/[a-zäöüß]+/g) || [];
+const vocab = new Set();
+for (const ch of chapters) {
+  for (const w of ch.words) [w.de, w.plural, ...(w.forms || []), w.article].forEach((x) => tok(x).forEach((t) => vocab.add(t)));
+  (ch.names || []).forEach((n) => tok(n).forEach((t) => vocab.add(t)));
+  for (const r of ch.rules) r.examples.forEach((e) => tok(e.de).forEach((t) => vocab.add(t)));
+  for (const l of ch.lessons) for (const ex of [...l.exercises, l.dialog]) {
+    const texts = [ex.text, ex.prompt, ...(ex.words || []).filter((x) => typeof x === 'string' && !wordsById.has(x)), ...(ex.accept || []), ...(ex.lines || []), ...(ex.turns || []).flatMap((t) => [t.bot, ...t.replies.map((r) => r.de)])];
+    texts.forEach((x) => typeof x === 'string' && !/[а-яё]/i.test(x) && tok(x).forEach((t) => vocab.add(t)));
+  }
+}
+for (const s of soundsJson.sounds) [...s.examples, ...s.pairs.flat()].forEach((x) => tok(x).forEach((t) => vocab.add(t)));
+export const asrVocab = [...vocab].filter((t) => t.length > 1);

@@ -35,7 +35,7 @@
           <Listen text={w} />
           <b style="flex:1">{w}</b>
           {#if said[w] !== undefined}<span class={said[w] ? 'ok' : 'no'}>{said[w] ? '✓' : '✗'}</span>{/if}
-          <Mic label="" onresult={(t) => (said = { ...said, [w]: compareSpeech(w, t).score === 1 })} />
+          <Mic label="" target={w} onresult={(t) => (said = { ...said, [w]: compareSpeech(w, t).score === 1 })} />
         </div>
       {/each}
     </div>
