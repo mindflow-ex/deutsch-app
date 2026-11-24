@@ -1,0 +1,2538 @@
+{
+ "id": "ch01",
+ "number": 1,
+ "title": "Guten Tag. Mein Name ist …",
+ "titleRu": "Добрый день. Меня зовут…",
+ "textbook": "Schritte International Neu A1.1, Lektion 1, стр. 10–21",
+ "names": [
+  "Anna",
+  "Lara",
+  "Nowak",
+  "Tim",
+  "Paul",
+  "Eva",
+  "Max",
+  "Weber",
+  "Müller",
+  "Schmidt",
+  "Sofia",
+  "Olga",
+  "Igor",
+  "Anton",
+  "Maria",
+  "Bauer",
+  "Nico",
+  "Emma",
+  "Klein",
+  "Berlin",
+  "Wien",
+  "Zürich",
+  "Moskau",
+  "Graz",
+  "Petrova",
+  "Ivanov",
+  "Rossi",
+  "Luca",
+  "Marta",
+  "Kowalska",
+  "Ben",
+  "Sonnenstraße",
+  "Kurs",
+  "A1",
+  "Laura",
+  "Novak",
+  "Veber",
+  "Wäber",
+  "Bayer",
+  "Pauer"
+ ],
+ "words": [
+  {
+   "id": "hallo",
+   "de": "hallo",
+   "ru": "привет, здравствуй",
+   "pos": "phrase"
+  },
+  {
+   "id": "guten-tag",
+   "de": "Guten Tag!",
+   "ru": "Добрый день! Здравствуйте!",
+   "pos": "phrase"
+  },
+  {
+   "id": "guten-morgen",
+   "de": "Guten Morgen!",
+   "ru": "Доброе утро!",
+   "pos": "phrase"
+  },
+  {
+   "id": "guten-abend",
+   "de": "Guten Abend!",
+   "ru": "Добрый вечер!",
+   "pos": "phrase"
+  },
+  {
+   "id": "gute-nacht",
+   "de": "Gute Nacht!",
+   "ru": "Спокойной ночи!",
+   "pos": "phrase"
+  },
+  {
+   "id": "tschues",
+   "de": "Tschüs!",
+   "ru": "Пока!",
+   "pos": "phrase"
+  },
+  {
+   "id": "auf-wiedersehen",
+   "de": "Auf Wiedersehen!",
+   "ru": "До свидания!",
+   "pos": "phrase"
+  },
+  {
+   "id": "bis-spaeter",
+   "de": "Bis später!",
+   "ru": "До скорого! Увидимся позже!",
+   "pos": "phrase"
+  },
+  {
+   "id": "bis-morgen",
+   "de": "Bis morgen!",
+   "ru": "До завтра!",
+   "pos": "phrase"
+  },
+  {
+   "id": "willkommen",
+   "de": "Herzlich willkommen!",
+   "ru": "Добро пожаловать!",
+   "pos": "phrase"
+  },
+  {
+   "id": "danke",
+   "de": "danke",
+   "ru": "спасибо",
+   "pos": "func"
+  },
+  {
+   "id": "bitte",
+   "de": "bitte",
+   "ru": "пожалуйста",
+   "pos": "func"
+  },
+  {
+   "id": "ja",
+   "de": "ja",
+   "ru": "да",
+   "pos": "func"
+  },
+  {
+   "id": "nein",
+   "de": "nein",
+   "ru": "нет",
+   "pos": "func"
+  },
+  {
+   "id": "und",
+   "de": "und",
+   "ru": "и, а",
+   "pos": "func"
+  },
+  {
+   "id": "auch",
+   "de": "auch",
+   "ru": "тоже, также",
+   "pos": "func"
+  },
+  {
+   "id": "gut",
+   "de": "gut",
+   "ru": "хорошо, хороший",
+   "pos": "adj"
+  },
+  {
+   "id": "schoen",
+   "de": "schön",
+   "ru": "красиво, прекрасно",
+   "pos": "adj"
+  },
+  {
+   "id": "super",
+   "de": "super",
+   "ru": "супер, отлично",
+   "pos": "adj"
+  },
+  {
+   "id": "sehr",
+   "de": "sehr",
+   "ru": "очень",
+   "pos": "func"
+  },
+  {
+   "id": "nur",
+   "de": "nur",
+   "ru": "только",
+   "pos": "func"
+  },
+  {
+   "id": "ein-bisschen",
+   "de": "ein bisschen",
+   "ru": "немного",
+   "pos": "phrase"
+  },
+  {
+   "id": "freut-mich",
+   "de": "Freut mich!",
+   "ru": "Очень приятно!",
+   "pos": "phrase"
+  },
+  {
+   "id": "entschuldigung",
+   "de": "Entschuldigung!",
+   "ru": "Извините!",
+   "pos": "phrase"
+  },
+  {
+   "id": "wie-bitte",
+   "de": "Wie bitte?",
+   "ru": "Простите, что? (переспросить)",
+   "pos": "phrase"
+  },
+  {
+   "id": "noch-einmal",
+   "de": "noch einmal",
+   "ru": "ещё раз",
+   "pos": "phrase"
+  },
+  {
+   "id": "langsam",
+   "de": "langsam",
+   "ru": "медленно",
+   "pos": "adj"
+  },
+  {
+   "id": "aha",
+   "de": "aha",
+   "ru": "ага, понятно",
+   "pos": "func"
+  },
+  {
+   "id": "ich",
+   "de": "ich",
+   "ru": "я",
+   "pos": "pron"
+  },
+  {
+   "id": "du",
+   "de": "du",
+   "ru": "ты",
+   "pos": "pron"
+  },
+  {
+   "id": "sie-formal",
+   "de": "Sie",
+   "ru": "Вы (вежливо)",
+   "pos": "pron"
+  },
+  {
+   "id": "mein",
+   "de": "mein",
+   "ru": "мой",
+   "pos": "pron"
+  },
+  {
+   "id": "ihr-formal",
+   "de": "Ihr",
+   "ru": "Ваш (вежливо)",
+   "pos": "pron"
+  },
+  {
+   "id": "das-pron",
+   "de": "das",
+   "ru": "это",
+   "pos": "pron"
+  },
+  {
+   "id": "man",
+   "de": "man",
+   "ru": "(безличное) «пишут», «говорят»",
+   "pos": "pron"
+  },
+  {
+   "id": "wer",
+   "de": "wer",
+   "ru": "кто",
+   "pos": "func"
+  },
+  {
+   "id": "wie",
+   "de": "wie",
+   "ru": "как",
+   "pos": "func"
+  },
+  {
+   "id": "woher",
+   "de": "woher",
+   "ru": "откуда",
+   "pos": "func"
+  },
+  {
+   "id": "was",
+   "de": "was",
+   "ru": "что",
+   "pos": "func"
+  },
+  {
+   "id": "aus",
+   "de": "aus",
+   "ru": "из",
+   "pos": "func"
+  },
+  {
+   "id": "der-art",
+   "de": "der",
+   "ru": "(артикль, здесь: aus der Schweiz)",
+   "pos": "func"
+  },
+  {
+   "id": "heissen",
+   "de": "heißen",
+   "ru": "называться, зваться",
+   "pos": "verb",
+   "forms": [
+    "heiße",
+    "heißt",
+    "heißen"
+   ]
+  },
+  {
+   "id": "sein",
+   "de": "sein",
+   "ru": "быть",
+   "pos": "verb",
+   "forms": [
+    "bin",
+    "bist",
+    "ist",
+    "sind"
+   ]
+  },
+  {
+   "id": "kommen",
+   "de": "kommen",
+   "ru": "приходить; быть родом",
+   "pos": "verb",
+   "forms": [
+    "komme",
+    "kommst",
+    "kommt",
+    "kommen"
+   ]
+  },
+  {
+   "id": "sprechen",
+   "de": "sprechen",
+   "ru": "говорить",
+   "pos": "verb",
+   "forms": [
+    "spreche",
+    "sprichst",
+    "spricht",
+    "sprechen"
+   ]
+  },
+  {
+   "id": "schreiben",
+   "de": "schreiben",
+   "ru": "писать",
+   "pos": "verb",
+   "forms": [
+    "schreibe",
+    "schreibst",
+    "schreibt",
+    "schreiben"
+   ]
+  },
+  {
+   "id": "buchstabieren",
+   "de": "buchstabieren",
+   "ru": "называть по буквам",
+   "pos": "verb",
+   "forms": [
+    "buchstabiere",
+    "buchstabierst",
+    "buchstabiert",
+    "buchstabieren"
+   ]
+  },
+  {
+   "id": "stimmt",
+   "de": "Stimmt!",
+   "ru": "Верно!",
+   "pos": "phrase"
+  },
+  {
+   "id": "tag",
+   "de": "Tag",
+   "article": "der",
+   "plural": "Tage",
+   "ru": "день",
+   "pos": "noun"
+  },
+  {
+   "id": "morgen",
+   "de": "Morgen",
+   "article": "der",
+   "plural": "Morgen",
+   "ru": "утро",
+   "pos": "noun"
+  },
+  {
+   "id": "abend",
+   "de": "Abend",
+   "article": "der",
+   "plural": "Abende",
+   "ru": "вечер",
+   "pos": "noun"
+  },
+  {
+   "id": "nacht",
+   "de": "Nacht",
+   "article": "die",
+   "plural": "Nächte",
+   "ru": "ночь",
+   "pos": "noun"
+  },
+  {
+   "id": "name",
+   "de": "Name",
+   "article": "der",
+   "plural": "Namen",
+   "ru": "имя",
+   "pos": "noun"
+  },
+  {
+   "id": "vorname",
+   "de": "Vorname",
+   "article": "der",
+   "plural": "Vornamen",
+   "ru": "имя (личное)",
+   "pos": "noun"
+  },
+  {
+   "id": "familienname",
+   "de": "Familienname",
+   "article": "der",
+   "plural": "Familiennamen",
+   "ru": "фамилия",
+   "pos": "noun"
+  },
+  {
+   "id": "herr",
+   "de": "Herr",
+   "article": "der",
+   "plural": "Herren",
+   "ru": "господин",
+   "pos": "noun"
+  },
+  {
+   "id": "frau",
+   "de": "Frau",
+   "article": "die",
+   "plural": "Frauen",
+   "ru": "госпожа; женщина",
+   "pos": "noun"
+  },
+  {
+   "id": "land",
+   "de": "Land",
+   "article": "das",
+   "plural": "Länder",
+   "ru": "страна",
+   "pos": "noun"
+  },
+  {
+   "id": "sprache",
+   "de": "Sprache",
+   "article": "die",
+   "plural": "Sprachen",
+   "ru": "язык (речь)",
+   "pos": "noun"
+  },
+  {
+   "id": "stadt",
+   "de": "Stadt",
+   "article": "die",
+   "plural": "Städte",
+   "ru": "город",
+   "pos": "noun"
+  },
+  {
+   "id": "strasse",
+   "de": "Straße",
+   "article": "die",
+   "plural": "Straßen",
+   "ru": "улица",
+   "pos": "noun"
+  },
+  {
+   "id": "adresse",
+   "de": "Adresse",
+   "article": "die",
+   "plural": "Adressen",
+   "ru": "адрес",
+   "pos": "noun"
+  },
+  {
+   "id": "visitenkarte",
+   "de": "Visitenkarte",
+   "article": "die",
+   "plural": "Visitenkarten",
+   "ru": "визитка",
+   "pos": "noun"
+  },
+  {
+   "id": "alphabet",
+   "de": "Alphabet",
+   "article": "das",
+   "plural": "Alphabete",
+   "ru": "алфавит",
+   "pos": "noun"
+  },
+  {
+   "id": "buchstabe",
+   "de": "Buchstabe",
+   "article": "der",
+   "plural": "Buchstaben",
+   "ru": "буква",
+   "pos": "noun"
+  },
+  {
+   "id": "email",
+   "de": "E-Mail",
+   "article": "die",
+   "plural": "E-Mails",
+   "ru": "электронная почта, письмо",
+   "pos": "noun"
+  },
+  {
+   "id": "deutschland",
+   "de": "Deutschland",
+   "ru": "Германия",
+   "pos": "country"
+  },
+  {
+   "id": "oesterreich",
+   "de": "Österreich",
+   "ru": "Австрия",
+   "pos": "country"
+  },
+  {
+   "id": "schweiz",
+   "de": "Schweiz",
+   "article": "die",
+   "ru": "Швейцария",
+   "pos": "country"
+  },
+  {
+   "id": "russland",
+   "de": "Russland",
+   "ru": "Россия",
+   "pos": "country"
+  },
+  {
+   "id": "ukraine",
+   "de": "Ukraine",
+   "article": "die",
+   "ru": "Украина",
+   "pos": "country"
+  },
+  {
+   "id": "tuerkei",
+   "de": "Türkei",
+   "article": "die",
+   "ru": "Турция",
+   "pos": "country"
+  },
+  {
+   "id": "polen",
+   "de": "Polen",
+   "ru": "Польша",
+   "pos": "country"
+  },
+  {
+   "id": "spanien",
+   "de": "Spanien",
+   "ru": "Испания",
+   "pos": "country"
+  },
+  {
+   "id": "italien",
+   "de": "Italien",
+   "ru": "Италия",
+   "pos": "country"
+  },
+  {
+   "id": "frankreich",
+   "de": "Frankreich",
+   "ru": "Франция",
+   "pos": "country"
+  },
+  {
+   "id": "portugal",
+   "de": "Portugal",
+   "ru": "Португалия",
+   "pos": "country"
+  },
+  {
+   "id": "finnland",
+   "de": "Finnland",
+   "ru": "Финляндия",
+   "pos": "country"
+  },
+  {
+   "id": "deutsch",
+   "de": "Deutsch",
+   "ru": "немецкий язык",
+   "pos": "language"
+  },
+  {
+   "id": "russisch",
+   "de": "Russisch",
+   "ru": "русский язык",
+   "pos": "language"
+  },
+  {
+   "id": "englisch",
+   "de": "Englisch",
+   "ru": "английский язык",
+   "pos": "language"
+  },
+  {
+   "id": "spanisch",
+   "de": "Spanisch",
+   "ru": "испанский язык",
+   "pos": "language"
+  },
+  {
+   "id": "italienisch",
+   "de": "Italienisch",
+   "ru": "итальянский язык",
+   "pos": "language"
+  },
+  {
+   "id": "franzoesisch",
+   "de": "Französisch",
+   "ru": "французский язык",
+   "pos": "language"
+  },
+  {
+   "id": "polnisch",
+   "de": "Polnisch",
+   "ru": "польский язык",
+   "pos": "language"
+  },
+  {
+   "id": "ukrainisch",
+   "de": "Ukrainisch",
+   "ru": "украинский язык",
+   "pos": "language"
+  },
+  {
+   "id": "tuerkisch",
+   "de": "Türkisch",
+   "ru": "турецкий язык",
+   "pos": "language"
+  }
+ ],
+ "rules": [
+  {
+   "id": "gruss",
+   "title": "Здороваемся и прощаемся",
+   "text": [
+    "Приветствие зависит от времени суток: Guten Morgen! (примерно до 11), Guten Tag! (днём), Guten Abend! (с 18 часов). Gute Nacht! говорят только перед сном.",
+    "Hallo! и Tschüs! звучат по-дружески, Guten Tag! и Auf Wiedersehen! вежливо. На юге часто слышно Grüß Gott! или Servus!, это нормально, но учить их пока не нужно.",
+    "Gute Nacht: у слова Nacht женский род, поэтому gute с -e, а не guten."
+   ],
+   "table": {
+    "head": [
+     "Когда",
+     "Здороваемся",
+     "Прощаемся"
+    ],
+    "rows": [
+     [
+      "утро",
+      "Guten Morgen!",
+      "Auf Wiedersehen! / Tschüs!"
+     ],
+     [
+      "день",
+      "Guten Tag! / Hallo!",
+      "Bis später! / Tschüs!"
+     ],
+     [
+      "вечер",
+      "Guten Abend!",
+      "Bis morgen!"
+     ],
+     [
+      "перед сном",
+      "—",
+      "Gute Nacht!"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Guten Morgen, Frau Weber!",
+     "ru": "Доброе утро, госпожа Вебер!"
+    },
+    {
+     "de": "Hallo, Tim! Tschüs, Tim!",
+     "ru": "Привет, Тим! Пока, Тим!"
+    },
+    {
+     "de": "Auf Wiedersehen, Herr Müller!",
+     "ru": "До свидания, господин Мюллер!"
+    }
+   ]
+  },
+  {
+   "id": "du-sie",
+   "title": "du или Sie",
+   "text": [
+    "du говорят друзьям, родным, детям и часто ровесникам. Sie (всегда с большой буквы) говорят незнакомым взрослым, на работе, в магазине.",
+    "К Sie обращаются по фамилии: Herr Müller, Frau Weber. К du по имени: Tim, Anna.",
+    "Глагол с Sie выглядит как начальная форма: Sie heißen, Sie kommen. С du окончание -st: du kommst."
+   ],
+   "examples": [
+    {
+     "de": "Wie heißen Sie? – Ich heiße Weber.",
+     "ru": "Как Вас зовут? – Моя фамилия Вебер."
+    },
+    {
+     "de": "Wie heißt du? – Ich heiße Anna.",
+     "ru": "Как тебя зовут? – Меня зовут Анна."
+    }
+   ]
+  },
+  {
+   "id": "verb-zweit",
+   "title": "Глагол всегда на втором месте",
+   "text": [
+    "В обычном немецком утверждении спрягаемый глагол стоит на втором месте. Первым может быть подлежащее или другое слово, но глагол не сдвигается.",
+    "В вопросе с вопросительным словом (W-Frage) первым идёт W-слово, вторым глагол, потом подлежащее: Wie heißt du? Woher kommen Sie?",
+    "Второе место считается по смысловым блокам, а не по словам: «Mein Name» это один блок."
+   ],
+   "table": {
+    "head": [
+     "1",
+     "2 (глагол)",
+     "дальше"
+    ],
+    "rows": [
+     [
+      "Ich",
+      "heiße",
+      "Anna."
+     ],
+     [
+      "Mein Name",
+      "ist",
+      "Anna Petrova."
+     ],
+     [
+      "Woher",
+      "kommst",
+      "du?"
+     ],
+     [
+      "Was",
+      "sprechen",
+      "Sie?"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich komme aus Russland.",
+     "ru": "Я из России."
+    },
+    {
+     "de": "Wer ist das? – Das ist Tim.",
+     "ru": "Кто это? – Это Тим."
+    }
+   ]
+  },
+  {
+   "id": "konj-1",
+   "title": "Окончания глагола: ich -e, du -st, Sie -en",
+   "text": [
+    "Отбрасываем -en у начальной формы и добавляем окончание: komm-en → ich komm-e, du komm-st, Sie komm-en.",
+    "Если основа кончается на s, ß или z, у du добавляется только -t: heißen → du heißt (не heißst).",
+    "sein (быть) неправильный, его формы просто запоминаем: ich bin, du bist, Sie sind, das ist."
+   ],
+   "table": {
+    "head": [
+     "",
+     "kommen",
+     "heißen",
+     "sein"
+    ],
+    "rows": [
+     [
+      "ich",
+      "komme",
+      "heiße",
+      "bin"
+     ],
+     [
+      "du",
+      "kommst",
+      "heißt",
+      "bist"
+     ],
+     [
+      "Sie",
+      "kommen",
+      "heißen",
+      "sind"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Ich bin Olga. Und wer bist du?",
+     "ru": "Я Ольга. А ты кто?"
+    },
+    {
+     "de": "Heißen Sie Weber? – Ja.",
+     "ru": "Ваша фамилия Вебер? – Да."
+    }
+   ]
+  },
+  {
+   "id": "aus-land",
+   "title": "Откуда: kommen aus + страна",
+   "text": [
+    "«Я из…» по-немецки ich komme aus …. Большинство стран идут без артикля: aus Russland, aus Deutschland, aus Polen.",
+    "Несколько стран всегда с артиклем die: die Schweiz, die Türkei, die Ukraine. После aus артикль die превращается в der: aus der Schweiz, aus der Ukraine. Пока просто запомните эти три фразы целиком.",
+    "Вопрос: Woher kommst du? Woher kommen Sie?"
+   ],
+   "examples": [
+    {
+     "de": "Woher kommen Sie? – Ich komme aus Österreich.",
+     "ru": "Откуда Вы? – Я из Австрии."
+    },
+    {
+     "de": "Ich komme aus der Schweiz.",
+     "ru": "Я из Швейцарии."
+    }
+   ]
+  },
+  {
+   "id": "sprechen",
+   "title": "sprechen: e меняется на i",
+   "text": [
+    "У некоторых глаголов в форме du гласная меняется: sprechen → du sprichst. У ich и Sie всё как обычно: ich spreche, Sie sprechen.",
+    "Названия языков пишутся с большой буквы и идут без артикля: Ich spreche Deutsch und Russisch.",
+    "Немного = ein bisschen, только = nur: Ich spreche nur ein bisschen Deutsch."
+   ],
+   "table": {
+    "head": [
+     "",
+     "sprechen"
+    ],
+    "rows": [
+     [
+      "ich",
+      "spreche"
+     ],
+     [
+      "du",
+      "sprichst"
+     ],
+     [
+      "Sie",
+      "sprechen"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Was sprichst du? – Ich spreche Russisch und Englisch.",
+     "ru": "На каких языках ты говоришь? – На русском и английском."
+    },
+    {
+     "de": "Sprechen Sie Deutsch? – Ja, ein bisschen.",
+     "ru": "Вы говорите по-немецки? – Да, немного."
+    }
+   ]
+  },
+  {
+   "id": "abc",
+   "title": "Диктуем по буквам",
+   "text": [
+    "Немцы часто просят продиктовать имя: Wie schreibt man das? (Как это пишется?) или Buchstabieren Sie, bitte!",
+    "Буквы, которые русскоязычные путают: V [фау], W [ве], J [йот], Y [ипсилон], Z [цет], E [е], I [и], H [ха].",
+    "Ä [э], Ö [ё], Ü [ю] называют звуком. ß называется «эсцет» и пишется только в маленьких буквах (Straße).",
+    "Если не расслышали: Wie bitte? Noch einmal, bitte! Bitte langsam!"
+   ],
+   "table": {
+    "head": [
+     "Буква",
+     "Как называется"
+    ],
+    "rows": [
+     [
+      "V",
+      "фау"
+     ],
+     [
+      "W",
+      "ве"
+     ],
+     [
+      "J",
+      "йот"
+     ],
+     [
+      "Z",
+      "цет"
+     ],
+     [
+      "Y",
+      "ипсилон"
+     ],
+     [
+      "ß",
+      "эсцет"
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "Wie schreibt man das? – W – E – B – E – R.",
+     "ru": "Как это пишется? – W – E – B – E – R."
+    },
+    {
+     "de": "Wie bitte? Noch einmal, bitte!",
+     "ru": "Простите? Ещё раз, пожалуйста!"
+    }
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "ch01-l1",
+   "title": "Hallo! Guten Tag!",
+   "titleRu": "Здороваемся и прощаемся",
+   "goal": "Поздороваться и попрощаться в любое время суток, дружески и вежливо.",
+   "textbook": {
+    "part": "A",
+    "pages": "10–12",
+    "tracks": [
+     "1.1–1.8 (фото-история)",
+     "1.9",
+     "1.10"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge 1 «Hallo!»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    },
+    {
+     "title": "Folge 3 «Tschüss!»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "long-short",
+   "rules": [
+    "gruss",
+    "du-sie"
+   ],
+   "words": [
+    "hallo",
+    "guten-morgen",
+    "guten-tag",
+    "guten-abend",
+    "gute-nacht",
+    "tschues",
+    "auf-wiedersehen",
+    "bis-spaeter",
+    "bis-morgen",
+    "willkommen"
+   ],
+   "exercises": [
+    {
+     "type": "pairs",
+     "pairs": [
+      [
+       "Guten Morgen!",
+       "Доброе утро!"
+      ],
+      [
+       "Guten Abend!",
+       "Добрый вечер!"
+      ],
+      [
+       "Gute Nacht!",
+       "Спокойной ночи!"
+      ],
+      [
+       "Tschüs!",
+       "Пока!"
+      ],
+      [
+       "Bis später!",
+       "До скорого!"
+      ]
+     ]
+    },
+    {
+     "type": "choice",
+     "prompt": "07:00. Вы входите в офис. Что скажете?",
+     "options": [
+      "Guten Morgen!",
+      "Gute Nacht!",
+      "Guten Abend!"
+     ],
+     "answer": 0,
+     "explain": "Утром говорят Guten Morgen!, Gute Nacht! только перед сном.",
+     "rule": "gruss"
+    },
+    {
+     "type": "choice",
+     "prompt": "20:30. Вы пришли в гости. Как поздороваться?",
+     "options": [
+      "Guten Morgen!",
+      "Guten Abend!",
+      "Bis morgen!"
+     ],
+     "answer": 1,
+     "explain": "С 18 часов здороваются Guten Abend!",
+     "rule": "gruss"
+    },
+    {
+     "type": "listen_choice",
+     "text": "Auf Wiedersehen, Frau Weber!",
+     "question": "Это приветствие или прощание?",
+     "options": [
+      "приветствие",
+      "прощание"
+     ],
+     "answer": 1,
+     "explain": "Auf Wiedersehen значит «до свидания»."
+    },
+    {
+     "type": "speak",
+     "text": "Guten Tag!",
+     "ru": "Добрый день!"
+    },
+    {
+     "type": "choice",
+     "prompt": "Как вежливо попрощаться с господином Мюллером?",
+     "options": [
+      "Tschüs, Müller!",
+      "Auf Wiedersehen, Herr Müller!",
+      "Hallo, Herr Müller!"
+     ],
+     "answer": 1,
+     "explain": "С незнакомым взрослым прощаемся вежливо и называем Herr + фамилия.",
+     "rule": "du-sie"
+    },
+    {
+     "type": "fill",
+     "text": "Gute ___!",
+     "hint": "ночь",
+     "answers": [
+      "Nacht"
+     ],
+     "explain": "Gute Nacht! – спокойной ночи."
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "Tag",
+      "Dach"
+     ],
+     "answer": 0,
+     "ru": [
+      "день",
+      "крыша"
+     ],
+     "explain": "В Tag долгое «а:» и звонкое начало, в Dach краткое «а» и «х»."
+    },
+    {
+     "type": "order",
+     "ru": "Добрый вечер, господин Вебер!",
+     "answer": [
+      "Guten",
+      "Abend,",
+      "Herr",
+      "Weber!"
+     ]
+    },
+    {
+     "type": "dictation",
+     "text": "Bis später!",
+     "accept": [
+      "Bis spaeter!"
+     ]
+    },
+    {
+     "type": "translate",
+     "ru": "Привет, Анна! Пока, Анна!",
+     "accept": [
+      "Hallo, Anna! Tschüs, Anna!",
+      "Hallo Anna! Tschüs Anna!",
+      "Hallo, Anna! Tschüss, Anna!"
+     ]
+    },
+    {
+     "type": "speak",
+     "text": "Auf Wiedersehen!",
+     "ru": "До свидания!"
+    },
+    {
+     "type": "choice",
+     "prompt": "Herzlich willkommen! – это…",
+     "options": [
+      "Добро пожаловать!",
+      "Спасибо большое!",
+      "До завтра!"
+     ],
+     "answer": 0
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "Утро в кафе",
+    "turns": [
+     {
+      "bot": "Guten Morgen!",
+      "ru": "Доброе утро!",
+      "replies": [
+       {
+        "de": "Guten Morgen!",
+        "ok": true
+       },
+       {
+        "de": "Gute Nacht!",
+        "ok": false,
+        "feedback": "Gute Nacht говорят перед сном. Утром Guten Morgen!"
+       }
+      ],
+      "keywords": [
+       [
+        "morgen",
+        "hallo"
+       ]
+      ]
+     },
+     {
+      "bot": "Herzlich willkommen!",
+      "ru": "Добро пожаловать!",
+      "replies": [
+       {
+        "de": "Danke!",
+        "ok": true
+       },
+       {
+        "de": "Tschüs!",
+        "ok": false,
+        "feedback": "Tschüs значит «пока». Здесь лучше поблагодарить: Danke!"
+       }
+      ],
+      "keywords": [
+       [
+        "danke"
+       ]
+      ]
+     },
+     {
+      "bot": "Tschüs! Bis morgen!",
+      "ru": "Пока! До завтра!",
+      "replies": [
+       {
+        "de": "Tschüs! Bis morgen!",
+        "ok": true
+       },
+       {
+        "de": "Guten Tag!",
+        "ok": false,
+        "feedback": "Вам говорят «пока», значит прощаемся: Tschüs!"
+       }
+      ],
+      "keywords": [
+       [
+        "tschüs",
+        "tschüss",
+        "wiedersehen",
+        "bis"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ch01-l2",
+   "title": "Ich heiße …",
+   "titleRu": "Как тебя зовут?",
+   "goal": "Спросить имя, назвать своё, представиться на «ты» и на «Вы».",
+   "textbook": {
+    "part": "B",
+    "pages": "13",
+    "tracks": [
+     "1.11",
+     "1.12"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge 5 «Ich heiße Emma»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "ei-ie",
+   "rules": [
+    "verb-zweit",
+    "konj-1"
+   ],
+   "words": [
+    "name",
+    "heissen",
+    "sein",
+    "ich",
+    "du",
+    "sie-formal",
+    "mein",
+    "freut-mich",
+    "wer",
+    "wie"
+   ],
+   "exercises": [
+    {
+     "type": "article",
+     "words": [
+      "name",
+      "tag",
+      "abend",
+      "nacht"
+     ]
+    },
+    {
+     "type": "choice",
+     "prompt": "Wie heißt du?",
+     "audio": true,
+     "options": [
+      "Ich heiße Olga.",
+      "Ich komme Olga.",
+      "Heiße ich Olga."
+     ],
+     "answer": 0,
+     "explain": "На вопрос с heißen отвечаем тем же глаголом, глагол на втором месте.",
+     "rule": "verb-zweit"
+    },
+    {
+     "type": "fill",
+     "text": "Wie ___ du?",
+     "hint": "heißen",
+     "answers": [
+      "heißt",
+      "heisst"
+     ],
+     "explain": "du heißt: основа кончается на ß, поэтому только -t.",
+     "rule": "konj-1"
+    },
+    {
+     "type": "fill",
+     "text": "Ich ___ Anton.",
+     "hint": "sein",
+     "answers": [
+      "bin"
+     ],
+     "rule": "konj-1"
+    },
+    {
+     "type": "conjugation",
+     "verb": "heißen",
+     "ru": "называться",
+     "forms": {
+      "ich": "heiße",
+      "du": "heißt",
+      "Sie": "heißen"
+     },
+     "given": [
+      "ich"
+     ]
+    },
+    {
+     "type": "order",
+     "ru": "Меня зовут Мария.",
+     "answer": [
+      "Mein Name",
+      "ist",
+      "Maria."
+     ],
+     "verbIndex": 1,
+     "explain": "Mein Name – один блок, глагол ist на втором месте."
+    },
+    {
+     "type": "order",
+     "ru": "Как Вас зовут?",
+     "answer": [
+      "Wie",
+      "heißen",
+      "Sie?"
+     ],
+     "verbIndex": 1
+    },
+    {
+     "type": "listen_choice",
+     "text": "Ich heiße Lara Nowak.",
+     "question": "Как её зовут?",
+     "options": [
+      "Lara Nowak",
+      "Laura Novak",
+      "Lara Weber"
+     ],
+     "answer": 0
+    },
+    {
+     "type": "speak",
+     "text": "Ich heiße Anna. Freut mich!",
+     "ru": "Меня зовут Анна. Очень приятно!"
+    },
+    {
+     "type": "conjugation",
+     "verb": "sein",
+     "ru": "быть",
+     "forms": {
+      "ich": "bin",
+      "du": "bist",
+      "Sie": "sind"
+     },
+     "given": []
+    },
+    {
+     "type": "translate",
+     "ru": "Кто это? – Это Тим.",
+     "accept": [
+      "Wer ist das? – Das ist Tim.",
+      "Wer ist das? Das ist Tim.",
+      "Wer ist das - Das ist Tim."
+     ]
+    },
+    {
+     "type": "dictation",
+     "text": "Wie heißen Sie?",
+     "accept": [
+      "Wie heissen Sie?"
+     ]
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "heißen",
+      "hießen"
+     ],
+     "answer": 0,
+     "ru": [
+      "зваться",
+      "(форма прошедшего)"
+     ],
+     "explain": "ei читается «ай», ie – долгое «и»."
+    },
+    {
+     "type": "choice",
+     "prompt": "Вы знакомитесь с соседкой лет 60. Как спросить имя?",
+     "options": [
+      "Wie heißt du?",
+      "Wie heißen Sie?",
+      "Wer bist du?"
+     ],
+     "answer": 1,
+     "rule": "du-sie"
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "Знакомство в группе",
+    "turns": [
+     {
+      "bot": "Hallo! Ich bin Nico. Wie heißt du?",
+      "ru": "Привет! Я Нико. Как тебя зовут?",
+      "replies": [
+       {
+        "de": "Ich heiße Anna.",
+        "ok": true
+       },
+       {
+        "de": "Ich heißt Anna.",
+        "ok": false,
+        "feedback": "С ich окончание -e: ich heiße."
+       }
+      ],
+      "keywords": [
+       [
+        "heiße",
+        "heisse",
+        "bin",
+        "name"
+       ]
+      ]
+     },
+     {
+      "bot": "Freut mich!",
+      "ru": "Очень приятно!",
+      "replies": [
+       {
+        "de": "Freut mich auch!",
+        "ok": true
+       },
+       {
+        "de": "Bis später!",
+        "ok": false,
+        "feedback": "Вы только познакомились, рано прощаться. Ответьте Freut mich auch!"
+       }
+      ],
+      "keywords": [
+       [
+        "freut",
+        "danke"
+       ]
+      ]
+     },
+     {
+      "bot": "Und wer ist das?",
+      "ru": "А кто это?",
+      "replies": [
+       {
+        "de": "Das ist Tim.",
+        "ok": true
+       },
+       {
+        "de": "Das bin Tim.",
+        "ok": false,
+        "feedback": "bin только с ich. Про другого человека: das ist."
+       }
+      ],
+      "keywords": [
+       [
+        "ist",
+        "das"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ch01-l3",
+   "title": "Woher kommst du?",
+   "titleRu": "Откуда ты?",
+   "goal": "Спросить, откуда человек, и сказать, откуда вы сами.",
+   "textbook": {
+    "part": "C",
+    "pages": "14",
+    "tracks": [
+     "1.13–1.15"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge 7 «Woher kommst du?»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "long-short",
+   "rules": [
+    "aus-land",
+    "konj-1"
+   ],
+   "words": [
+    "kommen",
+    "woher",
+    "aus",
+    "land",
+    "deutschland",
+    "oesterreich",
+    "schweiz",
+    "russland",
+    "ukraine",
+    "polen",
+    "spanien",
+    "italien"
+   ],
+   "exercises": [
+    {
+     "type": "pairs",
+     "pairs": [
+      [
+       "Deutschland",
+       "Германия"
+      ],
+      [
+       "Österreich",
+       "Австрия"
+      ],
+      [
+       "die Schweiz",
+       "Швейцария"
+      ],
+      [
+       "Polen",
+       "Польша"
+      ],
+      [
+       "Italien",
+       "Италия"
+      ],
+      [
+       "Spanien",
+       "Испания"
+      ]
+     ]
+    },
+    {
+     "type": "fill",
+     "text": "Woher ___ du?",
+     "hint": "kommen",
+     "answers": [
+      "kommst"
+     ],
+     "rule": "konj-1"
+    },
+    {
+     "type": "fill",
+     "text": "Ich komme ___ Russland.",
+     "hint": "из",
+     "answers": [
+      "aus"
+     ],
+     "rule": "aus-land"
+    },
+    {
+     "type": "choice",
+     "prompt": "Ich komme aus … Schweiz.",
+     "options": [
+      "der",
+      "die",
+      "—"
+     ],
+     "answer": 0,
+     "explain": "die Schweiz, но после aus: aus der Schweiz.",
+     "rule": "aus-land"
+    },
+    {
+     "type": "conjugation",
+     "verb": "kommen",
+     "ru": "приходить, быть родом",
+     "forms": {
+      "ich": "komme",
+      "du": "kommst",
+      "Sie": "kommen"
+     },
+     "given": [
+      "Sie"
+     ]
+    },
+    {
+     "type": "order",
+     "ru": "Откуда Вы?",
+     "answer": [
+      "Woher",
+      "kommen",
+      "Sie?"
+     ],
+     "verbIndex": 1
+    },
+    {
+     "type": "order",
+     "ru": "Я из Украины.",
+     "answer": [
+      "Ich",
+      "komme",
+      "aus",
+      "der",
+      "Ukraine."
+     ],
+     "verbIndex": 1
+    },
+    {
+     "type": "listen_choice",
+     "text": "Ich komme aus Österreich.",
+     "question": "Откуда человек?",
+     "options": [
+      "из Германии",
+      "из Австрии",
+      "из Швейцарии"
+     ],
+     "answer": 1
+    },
+    {
+     "type": "speak",
+     "text": "Ich komme aus Russland.",
+     "ru": "Я из России."
+    },
+    {
+     "type": "translate",
+     "ru": "Откуда ты? – Я из Польши.",
+     "accept": [
+      "Woher kommst du? – Ich komme aus Polen.",
+      "Woher kommst du? Ich komme aus Polen."
+     ]
+    },
+    {
+     "type": "dictation",
+     "text": "Woher kommen Sie?"
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "Staat",
+      "Stadt"
+     ],
+     "answer": 1,
+     "ru": [
+      "государство",
+      "город"
+     ],
+     "explain": "aa – долгое «а:», перед двумя согласными dt – краткое «а»."
+    },
+    {
+     "type": "choice",
+     "prompt": "Wer kommt aus Italien?",
+     "options": [
+      "Luca Rossi",
+      "Marta Kowalska",
+      "Igor Ivanov"
+     ],
+     "answer": 0,
+     "explain": "Имена подсказывают: Rossi – итальянская фамилия, Kowalska – польская."
+    },
+    {
+     "type": "speak",
+     "text": "Woher kommst du?",
+     "ru": "Откуда ты?"
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "На курсах немецкого",
+    "turns": [
+     {
+      "bot": "Hallo! Ich bin Emma. Woher kommst du?",
+      "ru": "Привет! Я Эмма. Откуда ты?",
+      "replies": [
+       {
+        "de": "Ich komme aus Russland.",
+        "ok": true
+       },
+       {
+        "de": "Ich komme Russland.",
+        "ok": false,
+        "feedback": "Нужен предлог aus: Ich komme aus Russland."
+       }
+      ],
+      "keywords": [
+       [
+        "aus"
+       ],
+       [
+        "komme",
+        "bin"
+       ]
+      ]
+     },
+     {
+      "bot": "Aha! Und woher kommt Igor?",
+      "ru": "Ага! А откуда Игорь?",
+      "replies": [
+       {
+        "de": "Igor kommt aus der Ukraine.",
+        "ok": true
+       },
+       {
+        "de": "Igor kommt aus Ukraine.",
+        "ok": false,
+        "feedback": "Ukraine с артиклем: aus der Ukraine."
+       }
+      ],
+      "keywords": [
+       [
+        "aus"
+       ]
+      ]
+     },
+     {
+      "bot": "Ich komme aus Deutschland, aus Berlin.",
+      "ru": "Я из Германии, из Берлина.",
+      "replies": [
+       {
+        "de": "Aha, schön! Berlin!",
+        "ok": true
+       },
+       {
+        "de": "Wie bitte?",
+        "ok": true
+       }
+      ],
+      "keywords": [
+       [
+        "berlin",
+        "schön",
+        "aha",
+        "bitte",
+        "deutschland"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ch01-l4",
+   "title": "Du oder Sie? Was sprechen Sie?",
+   "titleRu": "Ты или Вы? Языки",
+   "goal": "Выбрать между du и Sie, рассказать, на каких языках вы говорите.",
+   "textbook": {
+    "part": "C",
+    "pages": "14–15",
+    "tracks": [
+     "1.16–1.18"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge 6 «Das ist Nico»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "umlaut",
+   "rules": [
+    "sprechen",
+    "du-sie"
+   ],
+   "words": [
+    "sprechen",
+    "sprache",
+    "deutsch",
+    "russisch",
+    "englisch",
+    "franzoesisch",
+    "ukrainisch",
+    "ein-bisschen",
+    "nur",
+    "was",
+    "frankreich",
+    "tuerkei"
+   ],
+   "exercises": [
+    {
+     "type": "pairs",
+     "pairs": [
+      [
+       "Deutsch",
+       "немецкий"
+      ],
+      [
+       "Russisch",
+       "русский"
+      ],
+      [
+       "Englisch",
+       "английский"
+      ],
+      [
+       "Französisch",
+       "французский"
+      ],
+      [
+       "ein bisschen",
+       "немного"
+      ]
+     ]
+    },
+    {
+     "type": "fill",
+     "text": "Was ___ du?",
+     "hint": "sprechen",
+     "answers": [
+      "sprichst"
+     ],
+     "explain": "sprechen → du sprichst: e меняется на i.",
+     "rule": "sprechen"
+    },
+    {
+     "type": "fill",
+     "text": "Ich ___ Russisch und Deutsch.",
+     "hint": "sprechen",
+     "answers": [
+      "spreche"
+     ],
+     "rule": "sprechen"
+    },
+    {
+     "type": "conjugation",
+     "verb": "sprechen",
+     "ru": "говорить",
+     "forms": {
+      "ich": "spreche",
+      "du": "sprichst",
+      "Sie": "sprechen"
+     },
+     "given": []
+    },
+    {
+     "type": "choice",
+     "prompt": "Ваш новый начальник спрашивает, откуда вы. Как он скажет?",
+     "options": [
+      "Woher kommst du?",
+      "Woher kommen Sie?",
+      "Woher kommt Sie?"
+     ],
+     "answer": 1,
+     "rule": "du-sie"
+    },
+    {
+     "type": "choice",
+     "prompt": "Ребёнок соседей спрашивает ваше имя. Как он скажет?",
+     "options": [
+      "Wie heißt du?",
+      "Wie heißen Sie?",
+      "Wie heißt Sie?"
+     ],
+     "answer": 1,
+     "explain": "Дети обращаются ко взрослым на Sie.",
+     "rule": "du-sie"
+    },
+    {
+     "type": "order",
+     "ru": "Я говорю немного по-немецки.",
+     "answer": [
+      "Ich",
+      "spreche",
+      "ein",
+      "bisschen",
+      "Deutsch."
+     ],
+     "verbIndex": 1
+    },
+    {
+     "type": "order",
+     "ru": "Вы говорите по-английски?",
+     "answer": [
+      "Sprechen",
+      "Sie",
+      "Englisch?"
+     ],
+     "explain": "В вопросе без W-слова глагол идёт первым."
+    },
+    {
+     "type": "listen_choice",
+     "text": "Ich spreche Russisch, Englisch und ein bisschen Deutsch.",
+     "question": "Сколько языков знает человек?",
+     "options": [
+      "два",
+      "три",
+      "четыре"
+     ],
+     "answer": 1
+    },
+    {
+     "type": "speak",
+     "text": "Ich spreche ein bisschen Deutsch.",
+     "ru": "Я немного говорю по-немецки."
+    },
+    {
+     "type": "translate",
+     "ru": "Ты говоришь по-французски? – Нет, только по-английски.",
+     "accept": [
+      "Sprichst du Französisch? – Nein, nur Englisch.",
+      "Sprichst du Französisch? Nein, nur Englisch."
+     ]
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "schon",
+      "schön"
+     ],
+     "answer": 1,
+     "ru": [
+      "уже",
+      "красиво"
+     ],
+     "explain": "ö – губы как для «о», язык как для «э»."
+    },
+    {
+     "type": "dictation",
+     "text": "Sprechen Sie Deutsch?"
+    },
+    {
+     "type": "reading",
+     "title": "Kurs Deutsch A1",
+     "lines": [
+      "Hallo! Ich heiße Olga. Ich komme aus Russland.",
+      "Ich spreche Russisch und Englisch.",
+      "Ich spreche nur ein bisschen Deutsch.",
+      "Das ist Luca. Luca kommt aus Italien."
+     ],
+     "questions": [
+      {
+       "q": "Откуда Ольга?",
+       "options": [
+        "из России",
+        "из Италии",
+        "из Германии"
+       ],
+       "answer": 0
+      },
+      {
+       "q": "Как Ольга говорит по-немецки?",
+       "options": [
+        "хорошо",
+        "немного",
+        "совсем не говорит"
+       ],
+       "answer": 1
+      },
+      {
+       "q": "Кто Лука?",
+       "options": [
+        "учитель",
+        "человек из Италии",
+        "друг из России"
+       ],
+       "answer": 1
+      }
+     ]
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "Международная встреча",
+    "turns": [
+     {
+      "bot": "Guten Tag! Mein Name ist Paul Weber. Wie heißen Sie?",
+      "ru": "Добрый день! Меня зовут Пауль Вебер. Как Вас зовут?",
+      "replies": [
+       {
+        "de": "Guten Tag! Ich heiße Anton Ivanov.",
+        "ok": true
+       },
+       {
+        "de": "Hallo! Wie heißt du?",
+        "ok": false,
+        "feedback": "Вам сказали Sie, отвечаем тоже вежливо и называем себя."
+       }
+      ],
+      "keywords": [
+       [
+        "heiße",
+        "heisse",
+        "name",
+        "bin"
+       ]
+      ]
+     },
+     {
+      "bot": "Woher kommen Sie?",
+      "ru": "Откуда Вы?",
+      "replies": [
+       {
+        "de": "Ich komme aus Russland.",
+        "ok": true
+       },
+       {
+        "de": "Ich kommst aus Russland.",
+        "ok": false,
+        "feedback": "С ich окончание -e: ich komme."
+       }
+      ],
+      "keywords": [
+       [
+        "aus"
+       ]
+      ]
+     },
+     {
+      "bot": "Sprechen Sie Englisch?",
+      "ru": "Вы говорите по-английски?",
+      "replies": [
+       {
+        "de": "Ja, und ein bisschen Deutsch.",
+        "ok": true
+       },
+       {
+        "de": "Ja, ich sprichst Englisch.",
+        "ok": false,
+        "feedback": "sprichst только с du. С ich: ich spreche."
+       }
+      ],
+      "keywords": [
+       [
+        "ja",
+        "nein",
+        "spreche",
+        "bisschen",
+        "englisch",
+        "deutsch"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ch01-l5",
+   "title": "Wie schreibt man das?",
+   "titleRu": "Диктуем по буквам",
+   "goal": "Продиктовать своё имя по буквам и понять, когда диктуют вам.",
+   "textbook": {
+    "part": "D",
+    "pages": "16",
+    "tracks": [
+     "1.19",
+     "1.20"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge 4 «Von A bis Z»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "ei-ie",
+   "rules": [
+    "abc"
+   ],
+   "words": [
+    "alphabet",
+    "buchstabe",
+    "buchstabieren",
+    "schreiben",
+    "man",
+    "wie-bitte",
+    "noch-einmal",
+    "langsam",
+    "entschuldigung",
+    "vorname",
+    "familienname"
+   ],
+   "exercises": [
+    {
+     "type": "article",
+     "words": [
+      "alphabet",
+      "buchstabe",
+      "vorname",
+      "familienname",
+      "sprache",
+      "land"
+     ]
+    },
+    {
+     "type": "listen_choice",
+     "text": "W, E, B, E, R",
+     "question": "Какую фамилию продиктовали?",
+     "options": [
+      "Weber",
+      "Veber",
+      "Wäber"
+     ],
+     "answer": 0,
+     "explain": "W называется «ве», V – «фау»."
+    },
+    {
+     "type": "listen_choice",
+     "text": "B, A, U, E, R",
+     "question": "Какую фамилию продиктовали?",
+     "options": [
+      "Bauer",
+      "Bayer",
+      "Pauer"
+     ],
+     "answer": 0
+    },
+    {
+     "type": "choice",
+     "prompt": "Как по-немецки называется буква V?",
+     "options": [
+      "ве",
+      "фау",
+      "вэ"
+     ],
+     "answer": 1,
+     "rule": "abc"
+    },
+    {
+     "type": "choice",
+     "prompt": "Как по-немецки называется буква Z?",
+     "options": [
+      "зет",
+      "цет",
+      "цэ"
+     ],
+     "answer": 1,
+     "rule": "abc"
+    },
+    {
+     "type": "fill",
+     "text": "Wie ___ man das?",
+     "hint": "schreiben",
+     "answers": [
+      "schreibt"
+     ],
+     "explain": "С man глагол как с er/sie: man schreibt."
+    },
+    {
+     "type": "order",
+     "ru": "Повторите, пожалуйста, ещё раз!",
+     "answer": [
+      "Noch",
+      "einmal,",
+      "bitte!"
+     ]
+    },
+    {
+     "type": "choice",
+     "prompt": "Вы не расслышали фамилию. Что скажете?",
+     "options": [
+      "Wie bitte?",
+      "Freut mich!",
+      "Bis später!"
+     ],
+     "answer": 0
+    },
+    {
+     "type": "speak",
+     "text": "Wie schreibt man das?",
+     "ru": "Как это пишется?"
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "Wein",
+      "Wien"
+     ],
+     "answer": 1,
+     "ru": [
+      "вино",
+      "Вена"
+     ],
+     "explain": "ei – «ай», ie – долгое «и»."
+    },
+    {
+     "type": "dictation",
+     "text": "Entschuldigung, wie bitte?"
+    },
+    {
+     "type": "translate",
+     "ru": "Как Ваша фамилия? Медленно, пожалуйста!",
+     "accept": [
+      "Wie ist Ihr Familienname? Bitte langsam!",
+      "Wie ist Ihr Familienname? Langsam, bitte!",
+      "Wie heißen Sie? Bitte langsam!"
+     ]
+    },
+    {
+     "type": "speak",
+     "text": "Noch einmal, bitte! Bitte langsam!",
+     "ru": "Ещё раз, пожалуйста! Медленно, пожалуйста!"
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "Регистрация в отеле",
+    "turns": [
+     {
+      "bot": "Guten Abend! Wie ist Ihr Name, bitte?",
+      "ru": "Добрый вечер! Ваше имя, пожалуйста?",
+      "replies": [
+       {
+        "de": "Mein Name ist Anton Ivanov.",
+        "ok": true
+       },
+       {
+        "de": "Ihr Name ist Anton.",
+        "ok": false,
+        "feedback": "Ihr – «Ваш». О себе говорим mein: Mein Name ist …"
+       }
+      ],
+      "keywords": [
+       [
+        "name",
+        "heiße",
+        "heisse",
+        "bin"
+       ]
+      ]
+     },
+     {
+      "bot": "Wie schreibt man das?",
+      "ru": "Как это пишется?",
+      "replies": [
+       {
+        "de": "I – V – A – N – O – V.",
+        "ok": true
+       },
+       {
+        "de": "Ja, gut.",
+        "ok": false,
+        "feedback": "Просят продиктовать по буквам."
+       }
+      ],
+      "keywords": [
+       [
+        "i",
+        "v",
+        "a",
+        "n",
+        "o",
+        "fau",
+        "vau"
+       ]
+      ]
+     },
+     {
+      "bot": "Danke! Herzlich willkommen!",
+      "ru": "Спасибо! Добро пожаловать!",
+      "replies": [
+       {
+        "de": "Danke! Gute Nacht!",
+        "ok": true
+       },
+       {
+        "de": "Danke schön!",
+        "ok": true
+       }
+      ],
+      "keywords": [
+       [
+        "danke"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ch01-l6",
+   "title": "Visitenkarte",
+   "titleRu": "Визитка и повторение главы",
+   "goal": "Прочитать визитку, заполнить данные о себе и повторить всю главу.",
+   "textbook": {
+    "part": "E + Grammatik",
+    "pages": "17–19",
+    "tracks": [
+     "1.21"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Серии 1–7 для повторения",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "long-short",
+   "rules": [
+    "verb-zweit",
+    "konj-1",
+    "aus-land",
+    "sprechen"
+   ],
+   "words": [
+    "visitenkarte",
+    "adresse",
+    "strasse",
+    "stadt",
+    "email",
+    "herr",
+    "frau",
+    "stimmt"
+   ],
+   "exercises": [
+    {
+     "type": "reading",
+     "title": "Visitenkarte",
+     "lines": [
+      "Maria Bauer",
+      "Deutsch – Russisch – Englisch",
+      "Sonnenstraße 4, Graz, Österreich",
+      "maria.bauer@post.at"
+     ],
+     "questions": [
+      {
+       "q": "Как фамилия?",
+       "options": [
+        "Maria",
+        "Bauer",
+        "Graz"
+       ],
+       "answer": 1
+      },
+      {
+       "q": "Из какой страны Мария?",
+       "options": [
+        "Германия",
+        "Австрия",
+        "Швейцария"
+       ],
+       "answer": 1
+      },
+      {
+       "q": "Сколько языков на визитке?",
+       "options": [
+        "два",
+        "три",
+        "четыре"
+       ],
+       "answer": 1
+      }
+     ]
+    },
+    {
+     "type": "article",
+     "words": [
+      "visitenkarte",
+      "adresse",
+      "strasse",
+      "stadt",
+      "land",
+      "name",
+      "herr",
+      "frau"
+     ]
+    },
+    {
+     "type": "pairs",
+     "pairs": [
+      [
+       "der Vorname",
+       "имя"
+      ],
+      [
+       "der Familienname",
+       "фамилия"
+      ],
+      [
+       "die Straße",
+       "улица"
+      ],
+      [
+       "die Stadt",
+       "город"
+      ],
+      [
+       "das Land",
+       "страна"
+      ]
+     ]
+    },
+    {
+     "type": "conjugation",
+     "verb": "sein",
+     "ru": "быть",
+     "forms": {
+      "ich": "bin",
+      "du": "bist",
+      "Sie": "sind"
+     },
+     "given": [
+      "Sie"
+     ]
+    },
+    {
+     "type": "fill",
+     "text": "Woher ___ Sie?",
+     "hint": "kommen",
+     "answers": [
+      "kommen"
+     ]
+    },
+    {
+     "type": "fill",
+     "text": "Was ___ du? – Russisch.",
+     "hint": "sprechen",
+     "answers": [
+      "sprichst"
+     ],
+     "rule": "sprechen"
+    },
+    {
+     "type": "order",
+     "ru": "Меня зовут Ольга, я из Москвы.",
+     "answer": [
+      "Ich",
+      "heiße",
+      "Olga,",
+      "ich",
+      "komme",
+      "aus",
+      "Moskau."
+     ],
+     "verbIndex": 1
+    },
+    {
+     "type": "listen_choice",
+     "text": "Guten Tag! Ich bin Herr Klein. Ich komme aus Zürich.",
+     "question": "Откуда господин Кляйн?",
+     "options": [
+      "из Австрии",
+      "из Швейцарии",
+      "из Германии"
+     ],
+     "answer": 1,
+     "explain": "Цюрих (Zürich) – город в Швейцарии."
+    },
+    {
+     "type": "translate",
+     "ru": "Меня зовут … Я из России. Я говорю по-русски и немного по-немецки.",
+     "accept": [
+      "Ich heiße … Ich komme aus Russland. Ich spreche Russisch und ein bisschen Deutsch."
+     ],
+     "selfCheck": true,
+     "explain": "Вместо … впишите своё имя. Проверяем начало и конец фразы."
+    },
+    {
+     "type": "speak",
+     "text": "Mein Name ist Anton. Ich komme aus Russland.",
+     "ru": "Меня зовут Антон. Я из России."
+    },
+    {
+     "type": "minimal_pair",
+     "words": [
+      "Miete",
+      "Mitte"
+     ],
+     "answer": 0,
+     "ru": [
+      "арендная плата",
+      "середина"
+     ],
+     "explain": "ie – долгое «и», перед tt – краткое."
+    },
+    {
+     "type": "dictation",
+     "text": "Ich spreche ein bisschen Deutsch."
+    },
+    {
+     "type": "choice",
+     "prompt": "Найдите ошибку: «Woher kommst Sie?»",
+     "options": [
+      "Woher kommen Sie?",
+      "Woher Sie kommen?",
+      "Woher kommt Sie?"
+     ],
+     "answer": 0,
+     "rule": "konj-1"
+    },
+    {
+     "type": "speak",
+     "text": "Freut mich! Auf Wiedersehen!",
+     "ru": "Очень приятно! До свидания!"
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "Рассказ о себе",
+    "turns": [
+     {
+      "bot": "Hallo! Wie heißt du?",
+      "ru": "Привет! Как тебя зовут?",
+      "replies": [
+       {
+        "de": "Ich heiße Maria.",
+        "ok": true
+       },
+       {
+        "de": "Ich heißen Maria.",
+        "ok": false,
+        "feedback": "С ich: ich heiße."
+       }
+      ],
+      "keywords": [
+       [
+        "heiße",
+        "heisse",
+        "bin",
+        "name"
+       ]
+      ]
+     },
+     {
+      "bot": "Woher kommst du?",
+      "ru": "Откуда ты?",
+      "replies": [
+       {
+        "de": "Ich komme aus Russland.",
+        "ok": true
+       },
+       {
+        "de": "Ich komme aus der Russland.",
+        "ok": false,
+        "feedback": "Russland без артикля: aus Russland."
+       }
+      ],
+      "keywords": [
+       [
+        "aus"
+       ]
+      ]
+     },
+     {
+      "bot": "Was sprichst du?",
+      "ru": "На каких языках ты говоришь?",
+      "replies": [
+       {
+        "de": "Russisch und ein bisschen Deutsch.",
+        "ok": true
+       },
+       {
+        "de": "Ich sprichst Russisch.",
+        "ok": false,
+        "feedback": "С ich: ich spreche."
+       }
+      ],
+      "keywords": [
+       [
+        "russisch",
+        "deutsch",
+        "englisch",
+        "spreche"
+       ]
+      ]
+     },
+     {
+      "bot": "Super! Tschüs, bis morgen!",
+      "ru": "Супер! Пока, до завтра!",
+      "replies": [
+       {
+        "de": "Tschüs!",
+        "ok": true
+       },
+       {
+        "de": "Guten Morgen!",
+        "ok": false,
+        "feedback": "Прощаемся: Tschüs! или Bis morgen!"
+       }
+      ],
+      "keywords": [
+       [
+        "tschüs",
+        "tschüss",
+        "bis",
+        "wiedersehen"
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,5 +1,5 @@
-node_modules
-dist
-public/models/*.tar.gz
-public/audio/*.mp3
 .cache
+dist
+node_modules
+public/audio/*.mp3
+public/models/*.tar.gz

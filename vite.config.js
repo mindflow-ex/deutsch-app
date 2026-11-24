@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   base: './',
   plugins: [
-    svelte(),
+    svelte({ onwarn: (w, h) => w.code !== 'state_referenced_locally' && h(w) }),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
