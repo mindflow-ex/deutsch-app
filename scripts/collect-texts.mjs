@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Собирает все немецкие фразы, которые приложение озвучивает, в .cache/texts.json для Piper.
+// Собирает все немецкие фразы, которые приложение озвучивает, в .cache/texts.json для gen-audio.py.
 // Ключи должны совпадать с тем, что передаётся в say() в приложении.
+// Реплики собеседника в диалогах с voice: "m" идут с ключом "m:<текст>" и озвучиваются мужским голосом.
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
@@ -9,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const c = join(root, 'content');
 const texts = new Set();
+const male = new Set();
 const add = (s) => s && !/[а-яё]/i.test(s) && texts.add(s.trim());
 const label = (w) => (w.article ? `${w.article} ${w.de}` : w.de);
 
@@ -28,7 +30,7 @@ for (const f of readdirSync(c).filter((f) => /^ch\d\d\.json$/.test(f))) {
         case 'translate': add(ex.accept[0]); break;
         case 'minimal_pair': ex.words.forEach(add); break;
         case 'reading': ex.lines.forEach(add); break;
-        case 'dialog': ex.turns.forEach((t) => { add(t.bot); t.replies.forEach((r) => add(r.de)); }); break;
+        case 'dialog': ex.turns.forEach((t) => { ex.voice === 'm' ? male.add(t.bot.trim()) : add(t.bot); t.replies.forEach((r) => add(r.de)); }); break;
       }
       if (ex.type === 'article') for (const id of ex.words) { const w = ch.words.find((x) => x.id === id); if (w) add(label(w)); }
     }
@@ -39,7 +41,10 @@ for (const s of sounds) { s.examples.forEach(add); s.pairs.flat().forEach(add); 
 // фразы из интерфейса
 ['Guten Tag! Ich heiße Anna. Woher kommen Sie?'].forEach(add);
 
-const list = [...texts].sort().map((text) => ({ text, file: createHash('sha1').update(text).digest('hex').slice(0, 12) + '.mp3' }));
+// Имя файла зависит от голоса, чтобы при смене голоса не взять старую запись из кэша.
+const VOICE = { f: 'de-DE-KatjaNeural', m: 'de-DE-KillianNeural' };
+const item = (text, v) => ({ key: v === 'm' ? 'm:' + text : text, text, voice: v, file: createHash('sha1').update(VOICE[v] + '|' + text).digest('hex').slice(0, 12) + '.mp3' });
+const list = [...[...texts].sort().map((t) => item(t, 'f')), ...[...male].sort().map((t) => item(t, 'm'))];
 mkdirSync(join(root, '.cache'), { recursive: true });
 writeFileSync(join(root, '.cache', 'texts.json'), JSON.stringify(list, null, 1));
 console.log(`Фраз для озвучки: ${list.length}`);

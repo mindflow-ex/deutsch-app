@@ -1108,7 +1108,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "Утро в кафе",
+    "title": "Утро в кафе", "voice": "m",
     "turns": [
      {
       "bot": "Guten Morgen!",
@@ -1360,7 +1360,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "Знакомство в группе",
+    "title": "Знакомство в группе", "voice": "m",
     "turns": [
      {
       "bot": "Hallo! Ich bin Nico. Wie heißt du?",
@@ -1622,7 +1622,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "На курсах немецкого",
+    "title": "На курсах немецкого", "voice": "f",
     "turns": [
      {
       "bot": "Hallo! Ich bin Emma. Woher kommst du?",
@@ -1915,7 +1915,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "Международная встреча",
+    "title": "Международная встреча", "voice": "m",
     "turns": [
      {
       "bot": "Guten Tag! Mein Name ist Paul Weber. Wie heißen Sie?",
@@ -2148,7 +2148,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "Регистрация в отеле",
+    "title": "Регистрация в отеле", "voice": "f",
     "turns": [
      {
       "bot": "Guten Abend! Wie ist Ihr Name, bitte?",
@@ -2440,7 +2440,7 @@
    ],
    "dialog": {
     "type": "dialog",
-    "title": "Рассказ о себе",
+    "title": "Рассказ о себе", "voice": "m",
     "turns": [
      {
       "bot": "Hallo! Wie heißt du?",

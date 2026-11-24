@@ -21,7 +21,7 @@
   async function speakBot() {
     if (!ex.turns[t]) return;
     log = [...log, { who: 'bot', text: ex.turns[t].bot }];
-    await say(ex.turns[t].bot);
+    await say(ex.turns[t].bot, { voice: ex.voice });
   }
   function next(ok, text, feedback) {
     log = [...log, { who: 'me', text, ok }];
@@ -54,7 +54,7 @@
 <Mascot id={profile.mascot || 'shiba'} {emotion} size={86} />
 <div class="chat">
   {#each log as m}
-    <div class="msg {m.who}" class:bad={m.ok === false}>{m.text}{#if m.who === 'bot'} <Listen text={m.text} slow /> {/if}</div>
+    <div class="msg {m.who}" class:bad={m.ok === false}>{m.text}{#if m.who === 'bot'} <Listen text={m.text} voice={ex.voice} slow /> {/if}</div>
   {/each}
 </div>
 {#if turn}
