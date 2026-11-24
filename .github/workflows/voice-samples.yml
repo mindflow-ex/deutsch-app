@@ -1,0 +1,15 @@
+name: Образцы голосов
+on:
+  push:
+    branches: [voice-samples]
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: sudo apt-get install -y -qq ffmpeg > /dev/null && pip install -q edge-tts piper-tts
+      - run: python scripts/voice-samples.py
+      - uses: actions/upload-artifact@v4
+        with: { name: voice-samples, path: voice-samples }
