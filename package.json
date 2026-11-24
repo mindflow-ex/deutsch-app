@@ -1,10 +1,13 @@
 {
-  "name": "deutsch-app",
+  "name": "deutsch-zu-zweit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node scripts/validate-content.mjs"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,6 @@
   "dependencies": {
     "idb": "^8.0.4",
     "vosk-browser": "^0.0.8"
-  }
+  },
+  "type": "module"
 }

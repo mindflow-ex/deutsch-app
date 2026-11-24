@@ -1,0 +1,46 @@
+{
+  "sounds": [
+    {
+      "id": "long-short",
+      "title": "Долгие и краткие гласные",
+      "tip": "Гласная долгая перед одной согласной, перед h и когда удвоена (aa, ee, oo) или это ie. Краткая перед двумя и более согласными (tt, ss, ck, dt). Долгую тяните почти вдвое дольше, рот напряжён; краткую произносите отрывисто.",
+      "examples": ["Tag", "Name", "Abend", "Stadt", "kommen", "Sohn"],
+      "pairs": [["Staat", "Stadt"], ["Miete", "Mitte"], ["Ofen", "offen"], ["Beet", "Bett"], ["Tag", "Dach"]]
+    },
+    {
+      "id": "ei-ie",
+      "title": "ei и ie",
+      "tip": "ei читается «ай»: heißen, mein, Wein. ie читается долгим «и»: Wien, Bier, Miete. Подсказка: читаем по второй букве. ei → «ай» (как i в английском), ie → «и» (как e в английском).",
+      "examples": ["heißen", "mein", "nein", "Wien", "Bier", "Sie"],
+      "pairs": [["Wein", "Wien"], ["bei", "Bier"], ["mein", "Miete"], ["Reis", "Riese"]]
+    },
+    {
+      "id": "umlaut",
+      "title": "ü и ö",
+      "tip": "ü: скажите «и» и, не двигая языком, округлите губы трубочкой как для «у». ö: скажите «э» и округлите губы как для «о». Губы вперёд, язык остаётся спереди.",
+      "examples": ["Tschüs", "Türkei", "Österreich", "schön", "Französisch"],
+      "pairs": [["schon", "schön"], ["Ton", "Töne"], ["Tier", "Tür"], ["Kuchen", "Küchen"], ["vier", "für"]]
+    },
+    {
+      "id": "ch-ich",
+      "title": "ch после e, i, ä, ö, ü (ich-Laut)",
+      "tip": "Мягкое шипение, как длинное «хь» или как «щ» без языка у зубов. Улыбнитесь и выдохните через узкую щель: ich, Milch, Küche. Не превращайте его в «ш» и не в грубое «х».",
+      "examples": ["ich", "mich", "sprechen", "Milch", "Küche"],
+      "pairs": [["Kirche", "Kirsche"], ["mich", "misch"], ["Fichte", "fischte"]]
+    },
+    {
+      "id": "ch-ach",
+      "title": "ch после a, o, u (ach-Laut)",
+      "tip": "Глубокое «х» из горла, грубее русского: Buch, Nacht, auch.",
+      "examples": ["Nacht", "Buch", "auch", "Dach", "Sprache"],
+      "pairs": [["Buch", "Bücher"], ["Nacht", "Nächte"], ["Dach", "Dächer"]]
+    },
+    {
+      "id": "r",
+      "title": "Немецкое r",
+      "tip": "В начале слова и после согласной r гортанное: язык лежит, звук рождается у маленького язычка, как при лёгком полоскании горла (rot, Brot). В конце слова и в -er почти не слышно r, звучит краткое «а»: Vater [фа:та], Lehrer [ле:ра].",
+      "examples": ["Russland", "Brot", "drei", "Vater", "Lehrer", "der"],
+      "pairs": [["Lehrer", "Lehre"], ["Tor", "Tore"], ["Ohr", "Ohren"]]
+    }
+  ]
+}

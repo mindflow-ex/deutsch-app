@@ -1,0 +1,126 @@
+{
+ "id": "ch02",
+ "number": 2,
+ "title": "Meine Familie",
+ "titleRu": "Моя семья",
+ "textbook": "Schritte International Neu A1.1, Lektion 2, стр. 22–33",
+ "names": [],
+ "words": [
+  {
+   "id": "familie",
+   "de": "Familie",
+   "article": "die",
+   "plural": "Familien",
+   "ru": "семья",
+   "pos": "noun"
+  },
+  {
+   "id": "haben",
+   "de": "haben",
+   "ru": "иметь",
+   "pos": "verb",
+   "forms": [
+    "habe",
+    "hast",
+    "hat",
+    "haben",
+    "habt"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "possessiv",
+   "title": "mein / dein / Ihr",
+   "text": [
+    "…3–6 строк по-русски…"
+   ],
+   "table": {
+    "head": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "",
+      ""
+     ]
+    ]
+   },
+   "examples": [
+    {
+     "de": "…",
+     "ru": "…"
+    }
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "ch02-l1",
+   "title": "Wie geht's?",
+   "titleRu": "Как дела?",
+   "goal": "…",
+   "textbook": {
+    "part": "A",
+    "pages": "24",
+    "tracks": [
+     "1.xx"
+    ]
+   },
+   "nicos": [
+    {
+     "title": "Folge N «…»",
+     "url": "https://learngerman.dw.com/ru/nicos-weg/c-45476888"
+    }
+   ],
+   "sound": "long-short",
+   "rules": [
+    "possessiv"
+   ],
+   "words": [
+    "familie"
+   ],
+   "exercises": [
+    {
+     "type": "choice",
+     "prompt": "…",
+     "options": [
+      "…",
+      "…",
+      "…"
+     ],
+     "answer": 0,
+     "explain": "…",
+     "rule": "possessiv"
+    }
+   ],
+   "dialog": {
+    "type": "dialog",
+    "title": "…",
+    "turns": [
+     {
+      "bot": "…",
+      "ru": "…",
+      "replies": [
+       {
+        "de": "…",
+        "ok": true
+       },
+       {
+        "de": "…",
+        "ok": false,
+        "feedback": "…"
+       }
+      ],
+      "keywords": [
+       [
+        "…"
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
