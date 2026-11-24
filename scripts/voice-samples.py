@@ -9,13 +9,13 @@ PHRASES = [
     "Ich spreche nur ein bisschen Deutsch.",
     "schon – schön, Wein – Wien",
 ]
-EDGE = ["de-DE-KatjaNeural", "de-DE-ConradNeural", "de-DE-SeraphinaMultilingualNeural", "de-DE-FlorianMultilingualNeural", "de-DE-AmalaNeural"]
+EDGE = ["de-DE-KatjaNeural", "de-DE-ConradNeural", "de-DE-FlorianMultilingualNeural", "de-DE-KillianNeural"]
 
 async def edge():
     import edge_tts
     for v in EDGE:
         for i, p in enumerate(PHRASES, 1):
-            await edge_tts.Communicate(p, v, rate="-10%").save(f"{OUT}/{i}-edge-{v.split('-')[2]}.mp3")
+            await edge_tts.Communicate(p, v).save(f"{OUT}/{i}-edge0-{v.split('-')[2]}.mp3")
 
 def piper():
     sys.path.insert(0, "scripts")
@@ -38,5 +38,4 @@ def piper():
 
 os.makedirs(OUT, exist_ok=True)
 asyncio.run(edge())
-piper()
 print(sorted(os.listdir(OUT)))
